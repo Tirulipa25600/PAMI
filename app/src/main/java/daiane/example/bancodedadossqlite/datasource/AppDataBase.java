@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 import daiane.example.bancodedadossqlite.datamodel.ClienteDataModel;
+import daiane.example.bancodedadossqlite.datamodel.ProdutoDataModel;
 
 public class AppDataBase extends SQLiteOpenHelper {
 
@@ -22,6 +23,8 @@ public class AppDataBase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(ClienteDataModel.criarTabela());
+        db.execSQL(ProdutoDataModel.criarTabela());
+
 
     }
 
